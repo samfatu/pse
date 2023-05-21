@@ -1,0 +1,98 @@
+body {
+  background-color:whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p {
+  padding: 8px 0 8px 0;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 16% 0px 16%;
+  padding: 24px 0 24px 0;
+  border-right: 1px solid #DDD;
+  border-left: 1px solid #DDD;
+}
+
+#icon-img {
+  width: 56px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.title-area {
+  display: flex;
+  align-items: center;
+  padding: 8px 8px 0 8px;
+}
+
+.contributors-area {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #DDD;
+  padding: 8px 8px 8px 8px;
+}
+
+.section {
+  padding: 12px 12px 0 12px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.introduction-section {
+}
+
+#introduction-par {
+}
+
+.problem-section {
+}
+
+#problem-par {
+}
+
+.detection-section {
+}
+
+#detection-par {
+}
+
+.corruption-section {
+}
+
+#corruption-par {
+}
+
+.correction-section {
+}
+
+#correction-par {
+}
+
+.performance-section {
+}
+
+#performance-par {
+}
+
+.survey-section {
+}
+
+#survey-par {
+}
+
+.conclusion-section {
+}
+
+#conclusion-par {
+}
