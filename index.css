@@ -10,6 +10,13 @@ h1 {
 
 p {
   padding: 8px 0 8px 0;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #444;
+}
+
+a {
+  color: #77F;
+  text-decoration: none;
 }
 
 .content-area {
@@ -45,10 +52,26 @@ p {
 }
 
 .section-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.section-subtitle {
   font-size: 18px;
   font-weight: bold;
 }
 
+.subsection-par {
+  padding-left: 24px;
+}
+
+#incident-pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
 /* .introduction-section {
 }
 
