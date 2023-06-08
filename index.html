@@ -13,93 +13,378 @@
     <main class="content-area">
       <div class="title-area">
         <img src="./images/icon.png" id="icon-img" alt="icon"/>
-        <h1>Detecting and Correcting the Parts That Trigger Photosensitive Epilepsy on Video with Image Processing Methods</h1>
+        <h1 id="page-title">Detecting and Correcting the Parts That Trigger Photosensitive Epilepsy on Video with Image Processing Methods</h1>
       </div>
       <div class="contributors-area">
         <span>Ahmet Yasir Kilic, Mustafa Can Genc, Ali Kural</span>
+        <span id="uni-name">Hacettepe University</span>
+      </div>
+      <div class="link-buttons-container">
+        <button class="link-button" onclick="window.open('https://github.com/samfatu/pse-detection-correction', '_blank')">
+          <svg height="24"  aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true">
+            <path fill="#fff" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+        </svg>
+          <span style="margin-left: 4px">Code</span>
+        </button>
+        <button class="link-button" onclick="window.open('https://forms.gle/JqWB4xyVEekZqNEt5', '_blank')">
+          <svg width="24" viewBox="0 0 1024 1024" fill="#fff" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M452 628.8c17.6 0 32 14.4 32 32v8.8c0 17.6-14.4 32-32 32s-32-14.4-32-32v-8.8c0-17.6 14.4-32 32-32zM304 374.4s2.4 21.6 27.2 21.6 26.4-21.6 26.4-21.6C355.2 304 388 269.6 456 273.6c44.8 4.8 68 30.4 69.6 76-3.2 20-20 46.4-50.4 78.4-40 40.8-60.8 76.8-60.8 108.8v32.8s3.2 20 25.6 20 25.6-20 25.6-20v-23.2c0-27.2 19.2-59.2 57.6-96.8 40.8-36.8 60.8-71.2 60.8-101.6-3.2-84.8-47.2-128.8-132.8-132C352.8 216 304 268 304 374.4z" fill="" /><path d="M558.4 893.6H116c-28.8 0-53.6-24.8-53.6-53.6V77.6c0-28.8 24.8-53.6 53.6-53.6h656c28.8 0 53.6 24.8 53.6 53.6v24h-0.8v398.4l-266.4 393.6zM116 72c-2.4 0-5.6 3.2-5.6 5.6V840c0 2.4 3.2 5.6 5.6 5.6h416.8l244-360V75.2c-0.8-1.6-3.2-3.2-4.8-3.2h-656zM632.8 851.2l-4 5.6v7.2l-1.6 118.4v35.2l32.8-12.8 110.4-44.8 6.4-2.4 4-5.6 204.8-299.2 12.8-19.2-19.2-12.8-108.8-74.4-19.2-12.8-12.8 19.2-205.6 298.4zM844 584l108.8 74.4-6.4-32-204.8 299.2 10.4-8.8-110.4 44.8 32 21.6 1.6-118.4-4 12.8 204.8-299.2-32 5.6z" fill="" /><path d="M751.112 934.664l-89.136-60.984 27.104-39.616 89.136 60.992z" fill="#fff" /></svg>
+          <span style="margin-left: 4px">Survey</span>
+        </button>
       </div>
       <div class="section introduction-section">
-        <h2 class="section-title">Introduction</h2>
-        <p id="introduction-par">
+        <h2 class="section-title">Abstract</h2>
+        <p style="display: none;">
           &emsp;
-          Photosensitive epilepsy is a condition that affects 1 in 100 people worldwide, and 3% of people with epilepsy have photosensitive
-          epilepsy. This project aims to create an interface that enables people to consume digital visual content more safely. Image processing
-          methods will be used to investigate the sections that trigger photosensitive epilepsy. Algorithms will be developed and a correction
-          approach will be tried. After the harmful video segments that may trigger epilepsy are detected, the necessary information will be
-          given to the correction tool and the success of the correction will be measured.
+          Epilepsy is a neurological disorder that affects people of all ages, with photosensitive epilepsy (PSE) being triggered by
+          flashing patterns. Estimates suggest millions are affected by PSE, with approximately 3 in ten thousand people
+          having it [1]. Digital screens are common triggers, and both individuals with epilepsy and healthy individuals may
+          experience discomfort from such stimuli, emphasizing the importance of avoiding them.
+        <br>
+        &emsp;Many guidelines have been produced regarding photosensitive epilepsy (PSE) triggers because it is difficult for healthy
+          individuals to determine which content can trigger PSE. Ofcom, ITU, and W3C are some organizations that have
+          created accessibility guidelines for PSE. We followed W3C [2] because it is more focused on internet content.
+          Utilizing an open-source code developed by a previous researcher [3], we configured it according to our needs to identify PSE-triggering
+          sequences in visual content. The results were compared with the Photosensitive Epilepsy Analysis Tool (PEAT) [4]
+          developed by the Trace Center, which served as our ground truth, and we found that the results were parallel.
+        <br>
+        &emsp;Our goal is for the output of the correction process to neither be detected as PSE-triggering sequences when
+          inputted into the detection tool again, nor compromise the watchability of the relevant visual content.
+        <br>
+        &emsp;We classified PSE-triggering flash sequences into three categories: general flash, red flash, and a combination of both.
+          We developed separate algorithms for each flash type and optimized them to achieve the most successful results.
+        <br>
+        &emsp;To measure the performance of the algorithms, we compared the number of frames in the original video where flash sequences
+          were detected with the number of frames in the video processed by the correction algorithms, obtaining a correction percentage.
+          Additionally, since the subjective parameter of visibility can vary from person to person, we conducted an 18-video survey [5].
+          In this survey, participants viewed the original and corrected versions of each video side by side and rated their visibility
+          on a scale from one to five.
+        </p>
+        <p>
+          This article explores the impact of photosensitive epilepsy (PSE), a neurological disorder triggered by flashing patterns, on
+          individuals of all ages. With an estimated prevalence of millions affected by PSE, including approximately 3 in ten thousand
+          individuals [1], understanding and avoiding PSE triggers is crucial. Guidelines from organizations such as Ofcom, ITU, and W3C provide
+          valuable insights, particularly W3C's focus on internet content. By employing W3C guidelines [2] and leveraging an open-source code [3],
+          we developed specialized algorithms to identify PSE-triggering sequences in visual content. Comparative analysis against the
+          Photosensitive Epilepsy Analysis Tool (PEAT) [4] validated the accuracy of our results. Ensuring that the output of the correction
+          process does not trigger PSE and preserves the watchability of visual content is our primary objective. To enhance understanding,
+          PSE-triggering flash sequences were categorized into three types: general flash, red flash, and combined flashes. Tailored
+          algorithms were developed for each category, optimized to achieve optimal outcomes. The performance evaluation involved comparing
+          the number of frames with detected flash sequences in the original video to those in the corrected video, resulting in a correction
+          percentage. Additionally, we conducted an 18-video survey [5] to gauge visibility subjectivity. Participants evaluated the original
+          and corrected versions of each video side by side, providing ratings on a scale from one to five. This comprehensive study
+          contributes to the advancement of PSE detection and correction techniques, aiming to enhance accessibility and safety for
+          individuals susceptible to PSE.
         </p>
       </div>
-      <div class="section problem-section">
-        <h2 class="section-title">Problem Definition and Literature Review</h2>
-        <p id="problem-par">
-          <h3 class="section-subtitle">&emsp;Photosensitive Epilepsy</h3>
-          <p class="subsection-par">&emsp;People of all ages can suffer from epilepsy, a neurological disorder that often first manifests in children. It can result
-            in loss of consciousness, uncontrolled movements, and possibly fatal brain injury. A kind of epilepsy called photosensitive epilepsy
-            (PSE) is brought on by contrasting or flashing patterns. There are millions of people who are believed to be affected by it, according
-            to various estimates. Although triggers can be discovered in the natural world, they are most frequently connected to digital screens.
-            <br>
-            &emsp;Visual material that might cause photosensitive epilepsy can also make healthy individuals uncomfortable. The most crucial information is
-            that epilepsy may strike anybody at any age, and that flashing lights and contrasting patterns can make people feel ill, dizzy, and
-            uncomfortable. Strong photosensitivity triggers may affect healthy people in both good and bad ways, therefore it's crucial for everyone
-            to be able to avoid them.
-          </p>
-          <h3 class="section-subtitle">&emsp;Incidents</h3>
-          <p class="subsection-par">&emsp;There is a well konwn incident that 685 people were directly affected by a scene in the 38th episode of the
-            1st season of the cartoon Pokemon, which was broadcast in Japan in 1997, and applied to the emergency services after having an epileptic
-            seizure.
-          </p>
-          <div id="incident-pokemon">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/4QBsSTajfP0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <span style="margin-top: 8px">BBC News report on the banned Pokémon episode which caused seizures</span>
+
+      <div class="section">
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="./images/pokemon.gif" style="width: 900px; height: auto;">
+            <div class="text">Pokemon (Video 9)</div>
           </div>
-          <p class="subsection-par">&emsp;<a href="https://www.washingtonpost.com/video-games/2020/12/31/cyberpunk-2077-seizure/">Liana Ruppert, an associate
-            editor at Game Informer, experienced a severe grand seizure while playing "Cyberpunk 2077" due to a sequence in the game with rapid flashing lights.</a>
-            Ruppert authored an article about her experience, leading to international media attention and prompting the game's developer, CD Projekt
-            Red, to add a seizure warning and make adjustments to the game to remove seizure triggers. The incident highlighted the need for greater
-            awareness and consideration of photosensitive epilepsy in video games and other forms of visual entertainment.
-          </p>
-          <h3 class="section-subtitle">&emsp;Accessibility Guidelines</h3>
-          <p class="subsection-par">&emsp;
-          </p>
-        </p>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="./images/kanye2.gif" style="width: 900px; height: auto;">
+            <div class="text">Kanye West (Video 5)</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="./images/kanye.gif" style="width: 900px; height: auto;">
+            <div class="text">All Of The Lights (Video 11)</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="./images/epilepsy-test.gif" style="width: 900px; height: auto;">
+            <div class="text">Epilepsy Test Video (Video 1)</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="./images/bassnectar.gif" style="width: 900px; height: auto;">
+            <div class="text">Bassnectar (Video 2)</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
       </div>
-      <div class="section detection-section">
-        <h2 class="section-title">Detection</h2>
-        <p id="detection-par">
-          &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+
+      <div class="section">
+        <h2 class="section-title">Experiment Results</h2>
+        <p>Deney sonuçları</p>
+        <div class="table-container">
+          <table class="experiment-table">
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="table-col-empty-head"></th>
+                <th class="table-col-head" colspan="3">Original</th>
+                <th class="table-col-head" colspan="3">Corrected</th>
+                <th class="table-col-empty-head"></th>
+                <th class="table-col-empty-head"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="sub-head">
+                <td class="sub-head-col" style="border-left: 1px solid #000;">Video</td>
+                <td class="sub-head-col">General</td>
+                <td class="sub-head-col">Red</td>
+                <td class="sub-head-col">Both</td>
+                <td class="sub-head-col">General</td>
+                <td class="sub-head-col">Red</td>
+                <td class="sub-head-col">Both</td>
+                <td class="sub-head-col">Correction<br>Percentage</td>
+                <td class="sub-head-col" style="border-right: 1px solid #000;">Watchability<br>Score</td>
+              </tr>
+              <tr>
+                <td class="row-item">1</td>
+                <td class="row-item">511</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">22</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">95.7%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">2</td>
+                <td class="row-item">49</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">19</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">61.2%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">3</td>
+                <td class="row-item">9</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">100%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">4</td>
+                <td class="row-item">341</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">15</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">95.6%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">5</td>
+                <td class="row-item">316</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">100%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">6</td>
+                <td class="row-item">562</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">67</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">88.1%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">7</td>
+                <td class="row-item">213</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">17</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">92.0%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">8</td>
+                <td class="row-item">86</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">8</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">90.7%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">9</td>
+                <td class="row-item">163</td>
+                <td class="row-item">3</td>
+                <td class="row-item">140</td>
+                <td class="row-item">47</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">86%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">10</td>
+                <td class="row-item">60</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">100%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">11</td>
+                <td class="row-item">4</td>
+                <td class="row-item">8</td>
+                <td class="row-item">205</td>
+                <td class="row-item">16</td>
+                <td class="row-item">0</td>
+                <td class="row-item">16</td>
+                <td class="row-item">85.2%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">12</td>
+                <td class="row-item">174</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">87</td>
+                <td class="row-item">1</td>
+                <td class="row-item">1</td>
+                <td class="row-item">50%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">13</td>
+                <td class="row-item">107</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">3</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">97.2%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">14</td>
+                <td class="row-item">136</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">9</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">83.4%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">15</td>
+                <td class="row-item">355</td>
+                <td class="row-item">0</td>
+                <td class="row-item">1</td>
+                <td class="row-item">50</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">86.3%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">16</td>
+                <td class="row-item">423</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">17</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">95.9%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">17</td>
+                <td class="row-item">242</td>
+                <td class="row-item">42</td>
+                <td class="row-item">125</td>
+                <td class="row-item">95</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">77.8%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr>
+                <td class="row-item">18</td>
+                <td class="row-item">338</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">10</td>
+                <td class="row-item">0</td>
+                <td class="row-item">0</td>
+                <td class="row-item">97%</td>
+                <td class="row-item">1</td>
+              </tr>
+              <tr style="background-color: #f70;">
+                <td class="row-item empty-row"></td>
+                <td class="row-item empty-row"></td>
+                <td class="row-item empty-row"></td>
+                <td class="row-item empty-row"></td>
+                <td class="row-item empty-row"></td>
+                <td class="row-item empty-row"></td>
+                <td class="row-item">Avg</td>
+                <td class="row-item">88.5%</td>
+                <td class="row-item">123</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="section corruption-section">
-        <h2 class="section-title">Corruption</h2>
-        <p id="corruption-par">
-          &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+
+
+      <div class="section introduction-section">
+        <h2 class="section-title">Presentation Video</h2>
+        <p>Youtube Video Iframe</p>
       </div>
-      <div class="section correction-section">
-        <h2 class="section-title">Correction</h2>
-        <p id="correction-par">
-          &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-      <div class="section performance-section">
-        <h2 class="section-title">Performance</h2>
-        <p id="performance-par">
-          &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-      <div class="section survey-section">
-        <h2 class="section-title">Survey</h2>
-        <p id="survey-par">
-          &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-      <div class="section conclusion-section">
-        <h2 class="section-title">Conclusion</h2>
-        <p id="conclusion-par">
-          &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
+
     </main>
+    <div class="footer">
+      Hacettepe University
+    </div>
 	<script src="index.js"></script>
   </body>
 </html>
