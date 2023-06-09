@@ -112,7 +112,6 @@ a {
 
 .footer {
   min-height: 10vh;
-  background-color: #CCC;
 }
 
 * {box-sizing:border-box}
@@ -198,12 +197,6 @@ a {
   width: 900px;
   text-align: center;
 }
-
-/* .table-container {
-  height: 200px;
-  overflow-y: scroll;
-  padding: 12px 0 12px 0;
-} */
 
 thead {
   background-color: #444;
