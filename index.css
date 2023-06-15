@@ -79,7 +79,6 @@ a {
   margin: 0 4px 0 4px;
 }
 
-
 .section {
   display: flex;
   flex-direction: column;
@@ -92,22 +91,6 @@ a {
 .section-title {
   font-size: 28px;
   font-weight: bold;
-}
-
-.section-subtitle {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.subsection-par {
-  padding-left: 24px;
-}
-
-#incident-pokemon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .footer {

@@ -43,44 +43,38 @@
       </div>
       <div class="section introduction-section">
         <h2 class="section-title">Abstract</h2>
-        <p style="display: none;">
-          &emsp;
-          Epilepsy is a neurological disorder that affects people of all ages, with photosensitive epilepsy (PSE) being triggered by
-          flashing patterns. Estimates suggest millions are affected by PSE, with approximately 3 in ten thousand people
-          having it [1]. Digital screens are common triggers, and both individuals with epilepsy and healthy individuals may
-          experience discomfort from such stimuli, emphasizing the importance of avoiding them.
-        <br>
-        &emsp;Many guidelines have been produced regarding photosensitive epilepsy (PSE) triggers because it is difficult for healthy
-          individuals to determine which content can trigger PSE. Ofcom, ITU, and W3C are some organizations that have
-          created accessibility guidelines for PSE. We followed W3C [2] because it is more focused on internet content.
-          Utilizing an open-source code developed by a previous researcher [3], we configured it according to our needs to identify PSE-triggering
-          sequences in visual content. The results were compared with the Photosensitive Epilepsy Analysis Tool (PEAT) [4]
-          developed by the Trace Center, which served as our ground truth, and we found that the results were parallel.
-        <br>
-        &emsp;Our goal is for the output of the correction process to neither be detected as PSE-triggering sequences when
-          inputted into the detection tool again, nor compromise the watchability of the relevant visual content.
-        <br>
-        &emsp;We classified PSE-triggering flash sequences into three categories: general flash, red flash, and a combination of both.
-          We developed separate algorithms for each flash type and optimized them to achieve the most successful results.
-        <br>
-        &emsp;To measure the performance of the algorithms, we compared the number of frames in the original video where flash sequences
-          were detected with the number of frames in the video processed by the correction algorithms, obtaining a correction percentage.
-          Additionally, since the subjective parameter of visibility can vary from person to person, we conducted an 18-video survey [5].
-          In this survey, participants viewed the original and corrected versions of each video side by side and rated their visibility
-          on a scale from one to five.
-        </p>
         <p>
           This article explores the impact of photosensitive epilepsy (PSE), a neurological disorder triggered by flashing patterns, on
           individuals of all ages. With an estimated prevalence of millions affected by PSE, including approximately 3 in ten thousand
-          individuals [1], understanding and avoiding PSE triggers is crucial. Guidelines from organizations such as Ofcom, ITU, and W3C provide
-          valuable insights, particularly W3C's focus on internet content. By employing W3C guidelines [2] and leveraging an open-source code [3],
+          individuals <sup>
+            <a class="reference" href="https://epilepsysociety.org.uk/about-epilepsy/epileptic-seizures/seizure-triggers/photosensitive-epilepsy#:~:text=How%20common%20is%20photosensitive%20epilepsy,contrasting%20light%20and%20dark%20patterns">
+              [1]
+            </a>
+          </sup>, understanding and avoiding PSE triggers is crucial. Guidelines from organizations such as Ofcom, ITU, and W3C provide
+          valuable insights, particularly W3C's focus on internet content. By employing W3C guidelines <sup>
+            <a class="reference" href="https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions">
+              [2]
+            </a>
+          </sup> and leveraging an open-source code <sup>
+            <a class="reference" href="https://github.com/Radzim/PhotosensitivitySafety">
+              [3]
+            </a>
+          </sup>,
           we developed specialized algorithms to identify PSE-triggering sequences in visual content. Comparative analysis against the
-          Photosensitive Epilepsy Analysis Tool (PEAT) [4] validated the accuracy of our results. Ensuring that the output of the correction
+          Photosensitive Epilepsy Analysis Tool (PEAT) <sup>
+            <a class="reference" href="https://trace.umd.edu/peat/">
+              [4]
+            </a>
+          </sup> validated the accuracy of our results. Ensuring that the output of the correction
           process does not trigger PSE and preserves the watchability of visual content is our primary objective. To enhance understanding,
           PSE-triggering flash sequences were categorized into three types: general flash, red flash, and combined flashes. Tailored
           algorithms were developed for each category, optimized to achieve optimal outcomes. The performance evaluation involved comparing
           the number of frames with detected flash sequences in the original video to those in the corrected video, resulting in a correction
-          percentage. Additionally, we conducted an 18-video survey [5] to gauge visibility subjectivity. Participants evaluated the original
+          percentage. Additionally, we conducted an 18-video survey <sup>
+            <a class="reference" href="https://forms.gle/Ybu38KpqfyLg3aqu7">
+              [5]
+            </a>
+          </sup>  to gauge visibility subjectivity. Participants evaluated the original
           and corrected versions of each video side by side, providing ratings on a scale from one to five. This comprehensive study
           contributes to the advancement of PSE detection and correction techniques, aiming to enhance accessibility and safety for
           individuals susceptible to PSE.
@@ -154,8 +148,8 @@
             <thead>
               <tr>
                 <th class="table-col-empty-head"></th>
-                <th class="table-col-head" colspan="3">Original</th>
-                <th class="table-col-head" colspan="3">Corrected</th>
+                <th class="table-col-head" colspan="3">Original (frame)</th>
+                <th class="table-col-head" colspan="3">Corrected (frame)</th>
                 <th class="table-col-empty-head"></th>
                 <th class="table-col-empty-head"></th>
               </tr>
@@ -170,7 +164,7 @@
                 <td class="sub-head-col">Red</td>
                 <td class="sub-head-col">Both</td>
                 <td class="sub-head-col">Correction<br>Percentage</td>
-                <td class="sub-head-col" style="border-right: 1px solid #000;">Watchability<br>Score</td>
+                <td class="sub-head-col" style="border-right: 1px solid #000;">Watchability<br>Score (out of 5)</td>
               </tr>
               <tr>
                 <td class="row-item">1</td>
@@ -181,7 +175,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">95.7%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">4.33</td>
               </tr>
               <tr>
                 <td class="row-item">2</td>
@@ -192,7 +186,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">61.2%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.52</td>
               </tr>
               <tr>
                 <td class="row-item">3</td>
@@ -203,7 +197,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">100%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.23</td>
               </tr>
               <tr>
                 <td class="row-item">4</td>
@@ -214,7 +208,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">95.6%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">4.05</td>
               </tr>
               <tr>
                 <td class="row-item">5</td>
@@ -225,7 +219,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">100%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">4.02</td>
               </tr>
               <tr>
                 <td class="row-item">6</td>
@@ -236,7 +230,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">88.1%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.38</td>
               </tr>
               <tr>
                 <td class="row-item">7</td>
@@ -247,7 +241,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">92.0%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">4.12</td>
               </tr>
               <tr>
                 <td class="row-item">8</td>
@@ -258,7 +252,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">90.7%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.67</td>
               </tr>
               <tr>
                 <td class="row-item">9</td>
@@ -269,7 +263,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">86%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">4.14</td>
               </tr>
               <tr>
                 <td class="row-item">10</td>
@@ -280,7 +274,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">100%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.17</td>
               </tr>
               <tr>
                 <td class="row-item">11</td>
@@ -291,7 +285,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">16</td>
                 <td class="row-item">85.2%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.79</td>
               </tr>
               <tr>
                 <td class="row-item">12</td>
@@ -302,7 +296,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">50%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.71</td>
               </tr>
               <tr>
                 <td class="row-item">13</td>
@@ -313,7 +307,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">97.2%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.57</td>
               </tr>
               <tr>
                 <td class="row-item">14</td>
@@ -324,7 +318,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">83.4%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.71</td>
               </tr>
               <tr>
                 <td class="row-item">15</td>
@@ -335,7 +329,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">86.3%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.57</td>
               </tr>
               <tr>
                 <td class="row-item">16</td>
@@ -346,7 +340,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">95.9%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.71</td>
               </tr>
               <tr>
                 <td class="row-item">17</td>
@@ -357,7 +351,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">77.8%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.83</td>
               </tr>
               <tr>
                 <td class="row-item">18</td>
@@ -368,7 +362,7 @@
                 <td class="row-item">0</td>
                 <td class="row-item">0</td>
                 <td class="row-item">97%</td>
-                <td class="row-item">1</td>
+                <td class="row-item">3.71</td>
               </tr>
               <tr style="background-color: #AFA;">
                 <td class="row-item empty-row"></td>
@@ -379,7 +373,7 @@
                 <td class="row-item empty-row"></td>
                 <td class="row-item">Avg</td>
                 <td class="row-item">88.5%</td>
-                <td class="row-item">123</td>
+                <td class="row-item">3.74</td>
               </tr>
             </tbody>
           </table>
